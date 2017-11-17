@@ -41,9 +41,6 @@ while True:
 		
 
 	else:
-		#print(now.day) 
-		#print(now.hour)
-		#print(now.minute)
 		if (now.hour == 11):
 			if (now.minute < 29 and now.minute > 25):
 				print 'Class finishing' 
@@ -63,41 +60,4 @@ while True:
                         wiringpi.digitalWrite(PIN_BLUE, 0)
 
  
-'''
-	     # Wait for the time delay
-     		time.sleep(delay)
- 
-		# Turn the LedBorg off
-     		wiringpi.digitalWrite(PIN_RED, 0)
-     		wiringpi.digitalWrite(PIN_GREEN, 0)
-     		wiringpi.digitalWrite(PIN_BLUE, 0)
-     		print 'LedBorg off'
-		time.sleep(delay)
-
-	else:
-		wiringpi.digitalWrite(PIN_RED, 0)
-                wiringpi.digitalWrite(PIN_GREEN, 0)
-                wiringpi.digitalWrite(PIN_BLUE, 0)
-		print 'Even minute'
-		time.sleep(delay)  
-
-while True:
-     if ((now.minute % 2) == 0):  
-     # Set the LedBorg colour
-     	wiringpi.digitalWrite(PIN_RED, red)
-     	wiringpi.digitalWrite(PIN_GREEN, green)
-     	wiringpi.digitalWrite(PIN_BLUE, blue)
-     	print 'LedBorg on'
- 
-     # Wait for the time delay
-     	time.sleep(delay)
- 
-# Turn the LedBorg off
-     	wiringpi.digitalWrite(PIN_RED, 0)
-     	wiringpi.digitalWrite(PIN_GREEN, 0)
-     	wiringpi.digitalWrite(PIN_BLUE, 0)
-     	print 'LedBorg off'
-
-'''
-
 
