@@ -20,6 +20,18 @@ green = 1
 blue = 0
 delay = 1
 
+def classFinishing():
+	print 'Class finishing' 
+        wiringpi.digitalWrite(PIN_RED, red)
+        wiringpi.digitalWrite(PIN_GREEN, green)
+        wiringpi.digitalWrite(PIN_BLUE, blue)
+        print 'LedBorg on'
+        time.sleep(delay)
+        wiringpi.digitalWrite(PIN_RED, 0)
+        wiringpi.digitalWrite(PIN_GREEN, 0)
+        wiringpi.digitalWrite(PIN_BLUE, 0)
+        time.sleep(delay)
+        print 'LedBorg off'
 
 while True:
 	now = datetime.datetime.now()
@@ -27,22 +39,7 @@ while True:
 	print(now.minute % 2)
 
 	if ((now.minute % 2) == 1):
-		print 'Odd minute'
-		wiringpi.digitalWrite(PIN_RED, red)
-     		wiringpi.digitalWrite(PIN_GREEN, green)
-     		wiringpi.digitalWrite(PIN_BLUE, blue)
-     		print 'LedBorg on'
- 
-	     # Wait for the time delay
-     		time.sleep(delay)
- 
-		# Turn the LedBorg off
-     		wiringpi.digitalWrite(PIN_RED, 0)
-     		wiringpi.digitalWrite(PIN_GREEN, 0)
-     		wiringpi.digitalWrite(PIN_BLUE, 0)
-     		print 'LedBorg off'
-		time.sleep(delay)
-
+		classFinishing() 	
 	else:
 		wiringpi.digitalWrite(PIN_RED, 0)
                 wiringpi.digitalWrite(PIN_GREEN, 0)
