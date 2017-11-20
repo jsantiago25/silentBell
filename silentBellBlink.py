@@ -41,8 +41,8 @@ while True:
 		
 
 	else:
-		if (now.hour == 11):
-			if (now.minute < 29 and now.minute > 25):
+		if (now.hour == 8):
+			if (now.minute < 35 and now.minute > 31):
 				print 'Class finishing' 
 				wiringpi.digitalWrite(PIN_RED, red)
                         	wiringpi.digitalWrite(PIN_GREEN, green)
@@ -54,6 +54,44 @@ while True:
                 		wiringpi.digitalWrite(PIN_BLUE, 0)
                 		time.sleep(delay)
 				print 'LedBorg off'  
+		elif (now.hour == 9):
+			if (now.minute < 20 and now.minute > 14):
+				print 'Class finishing' 
+				wiringpi.digitalWrite(PIN_RED, red)
+                        	wiringpi.digitalWrite(PIN_GREEN, green)
+                        	wiringpi.digitalWrite(PIN_BLUE, blue)
+                        	print 'LedBorg on'
+				time.sleep(delay)
+				wiringpi.digitalWrite(PIN_RED, 0)
+                		wiringpi.digitalWrite(PIN_GREEN, 0)
+                		wiringpi.digitalWrite(PIN_BLUE, 0)
+                		time.sleep(delay)
+				print 'LedBorg off'  
+		elif (now.hour == 10):
+			if (now.minute < 5 and now.minute >= 0):
+				print 'Class finishing' 
+				wiringpi.digitalWrite(PIN_RED, red)
+                        	wiringpi.digitalWrite(PIN_GREEN, green)
+                        	wiringpi.digitalWrite(PIN_BLUE, blue)
+                        	print 'LedBorg on'
+				time.sleep(delay)
+				wiringpi.digitalWrite(PIN_RED, 0)
+                		wiringpi.digitalWrite(PIN_GREEN, 0)
+                		wiringpi.digitalWrite(PIN_BLUE, 0)
+                		time.sleep(delay)
+				print 'LedBorg off' 
+			elif (now.minute < 20 and > 14): 
+				print 'Class finishing' 
+                                wiringpi.digitalWrite(PIN_RED, red)
+                                wiringpi.digitalWrite(PIN_GREEN, green)
+                                wiringpi.digitalWrite(PIN_BLUE, blue)
+                                print 'LedBorg on'
+                                time.sleep(delay)
+                                wiringpi.digitalWrite(PIN_RED, 0)
+                                wiringpi.digitalWrite(PIN_GREEN, 0)
+                                wiringpi.digitalWrite(PIN_BLUE, 0)
+                                time.sleep(delay)
+                                print 'LedBorg off
 		else:
 			wiringpi.digitalWrite(PIN_RED, 0)
                         wiringpi.digitalWrite(PIN_GREEN, 0)
