@@ -67,7 +67,7 @@ while True:
 				classFinishing()  
 			elif (now.minute < 50 and now.minute >= 44):
 				classFinshing() 
-			elif (now.minute <= 49 an now.minute > 47):
+			elif (now.minute <= 49 and now.minute > 47):
 				classFinishing()  
 		else:
 			wiringpi.digitalWrite(PIN_RED, 0)
@@ -84,7 +84,7 @@ while True:
 		elif (now.hour == 10):
 			if (now.minute < 5 and now.minute >= 0):
 				classFinishing()
-			elif (now.minute < 20 and > 14):
+			elif (now.minute < 20 and now.minute > 14):
 				classFinishing() 
 		elif (now.hour == 11):
 			if (now.minute < 5 and now.minute >= 0): 
@@ -104,8 +104,8 @@ while True:
 			if (now.minute < 5 and now.minute >= 0):
 				classFinishing()  
 			elif (now.minute < 50 and now.minute >= 44):
-				classFinshing() 
-			elif (now.minute <= 49 an now.minute > 47):
+				classFinishing() 
+			elif (now.minute <= 49 and now.minute > 47):
 				classFinishing()  
 		else:
 			wiringpi.digitalWrite(PIN_RED, 0)
